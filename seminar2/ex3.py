@@ -4,18 +4,20 @@
 # Пример списка ИНДЕКСОВ [2, 2, 3, 1, 8]
 # Ввод: 4 [-4, -3, -2, -1, 0, 1, 2, 3,4]
 
-from random import randint
-F = 5 # const
-n = int(input('n = '))
-newList = []
+num = int(input('Введите целое число: \n'))
+list = []
+for i in range(-num, num+1):
+    list.append(i)
 
-for i in range(-n, n+1):
-    newList.append(i)
-print(newList)
-nList = []
-composition = 1
+import random
+index_list  = []
+while len(index_list)<5:
+    index_list.append(random.randint(0,num * 2 + 1))
 
-for i in range(F + 1):
-    nList.append(randint(0, len(newList)))
-composition *= nList[i]
-print(f'произведение элементов на индексах: {nList} равно {composition}')
+product = 1
+for j in range(len(index_list)):
+    product *= list[index_list[j]]
+    
+print(index_list)
+print(list)
+print(product)
