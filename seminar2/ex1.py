@@ -3,20 +3,11 @@
 # Пример:
 # пусть N = 4, тогда [ 1, 2, 6, 24 ] (1, 1*2, 1*2*3, 1*2*3*4)
 
-def number():
-    try: 
-        num = int(input('enter N: '))
-        return abs(num)   #на случай ввода отрицательного числа
-    except ValueError:
-        print('Incorrect input!')
-        return number()
-
-num_N = number()
-
-list_factorial = []
-num_list = 1
-for i in range(1, num_N + 1): #(1*1, 1*2, 2*3, 6*4, 24*...)
-    num_list *= i
-    list_factorial.append(num_list)
-
-print('N =', num_N,' → ', list_factorial)
+num = int(input('Введите число: \n'))
+list =[]
+for i in range(1,num+1):
+    number_to_list = 1
+    for j in range(1,i+1):
+        number_to_list *= j
+    list.append(number_to_list)
+print(list)
