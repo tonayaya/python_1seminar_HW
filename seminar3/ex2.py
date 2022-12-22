@@ -3,3 +3,14 @@
 # Пример:
 # - [2, 3, 4, 5, 6] => [12, 15, 16];
 # - [2, 3, 5, 6] => [12, 15]
+
+in_list = list(input('Задайте список из нескольких чисел без разделителей: '))
+print(in_list)
+n = len(in_list)
+if n % 2 == 1:
+    out_list = [0] * (n // 2 + 1)
+else:
+    out_list = [0] * (n // 2)
+for i in range(len(out_list)):
+    out_list[i] = int(in_list[i]) * int(in_list[n-1-i])
+print(out_list)
