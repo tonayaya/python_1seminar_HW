@@ -5,3 +5,8 @@
 
 # Все задачи решать с помощью использования лямбд, filter, map, zip, enumerate, List Comprehension
 
+def two_digit_numbers():
+    n = list(map(int, input('Введите числа через пробел:').split()))
+    return ' '.join(map(str, filter(lambda i: 9 < abs(i) < 100, n)))
+
+print(f'[{two_digit_numbers()}]')
