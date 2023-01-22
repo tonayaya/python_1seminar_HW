@@ -4,3 +4,10 @@
 # - 6782 -> 23
 # - 0,56 -> 11
 
+def amount(number):
+    s = sum(map(int, number.replace('.', '').replace('-', '')))
+    return s
+
+
+number = input('Введите число: ')
+print(f'Сумма цифр: {amount(number)}')
