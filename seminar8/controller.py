@@ -27,4 +27,3 @@ def controller():
                     flag = 0
                 else:
                     see_rating(last_name)
-                    

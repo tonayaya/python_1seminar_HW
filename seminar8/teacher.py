@@ -7,10 +7,9 @@ def add_student():
     set_student(metric)
 
 
-    def put_rating():
+def put_rating():
         """Получение данных оценки от учителя и их предача для записи"""
         last_name = input('Введи Фамилию ученика: ')
         lesson = input('Введи название урока: ')
         rating = input('Введи оценку или несколько оценок через пробел: ')
         set_rating(last_name, lesson, rating)
-        

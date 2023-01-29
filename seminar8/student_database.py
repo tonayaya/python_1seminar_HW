@@ -34,11 +34,10 @@ def save_db():
     json.dump(student_db, open('db_student.json', 'w'))
 
 
-    def load_db():
+def load_db():
         """Сохранение данных учеников из файла формата .json в словарь 'student_db'"""
         global student_db
         if os.stat('db_student.json').st_size == 0:
             student_db = {}
         else:
             student_db = json.load(open('db_student.json'))
-            
