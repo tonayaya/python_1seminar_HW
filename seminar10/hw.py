@@ -74,7 +74,7 @@ def operatons_rational(update, context):
                 result = rational_one / rational_two
             except:
                 update.message.reply_text('Деление на ноль запрещено')
-        update.message.reply_text(f'Результат: {rational_one} + {rational_two} = {result}')
+        update.message.reply_text(f'Результат: {rational_one}  {rational_two} = {result}')
         return ConversationHandler.END
     else:
         update.message.reply_text('Ошибка ввода. Выберите действие: \n+ - для сложения; \n- - для вычетания; \n* - для умножения; \n/ - для деления. \n' )
